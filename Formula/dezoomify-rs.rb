@@ -1,12 +1,13 @@
 class DezoomifyRs < Formula
   desc "Zoomable image downloader for Google Arts & Culture, Zoomify, IIIF, and others"
   homepage "https://dezoomify-rs.ophir.dev"
-  url "https://github.com/lovasoa/dezoomify-rs/releases/download/v2.9.1/dezoomify-rs-macos.tgz"
-  sha256 "679fe72bf725e9f05cb95fd528aa0abc4b4c49d953ff7e2f8a963bf0c081152a"
+  version "2.9.2"
+  url "https://github.com/lovasoa/dezoomify-rs/archive/refs/tags/v2.9.2.tar.gz"
+  sha256 "33bdc75ada73faacd5551ecc7da2e4c99a6fa62fb7c9325db3d83b22e9eb8157"
   license "GPL-3.0-only"
 
   def install
-    bin.install "dezoomify-rs"
+    system "cargo", "install", *std_cargo_args
   end
 
   test do
