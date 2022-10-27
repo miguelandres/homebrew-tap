@@ -5,10 +5,9 @@ class DezoomifyRs < Formula
   sha256 "33bdc75ada73faacd5551ecc7da2e4c99a6fa62fb7c9325db3d83b22e9eb8157"
   license "GPL-3.0-only"
 
-  depends_on "rustup-init" => :build
+  depends_on "rust" => :build
 
   def install
-    system "rustup-init", "-y", "--default-toolchain", "nightly", "--profile", "default"
     system "cargo", "install", *std_cargo_args
   end
 
