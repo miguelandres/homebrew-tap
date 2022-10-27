@@ -3,7 +3,7 @@ class DotfilesRs < Formula
   homepage "https://github.com/miguelandres/dotfiles"
   version "0.9.0"
   url "https://github.com/miguelandres/dotfiles-rs/archive/refs/tags/nightly-2022-10-27.tar.gz"
-  sha256 "7029e0f7fcdbc66ca754081aadcc740f4680ce04023413d58f5b702ea86a7f7a"
+  sha256 "5859a8ee49a5fd931b80b0930ad996604d3ec1fb9e9ba62693d69580f15cb227"
   license "MIT"
 
   depends_on "rustup-init" => :build
