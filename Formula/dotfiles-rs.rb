@@ -5,11 +5,12 @@ class DotfilesRs < Formula
   sha256 "7029e0f7fcdbc66ca754081aadcc740f4680ce04023413d58f5b702ea86a7f7a"
   license "MIT"
 
-  depends_on "rustup-init"
+  depends_on "rustup-init" => :build
 
   def install
-    system "rustup-init", "" 
-    bin.install "dotfiles"
+    system "rustup-init", "-y", "--default-toolchain", "nightly", "--profile", "default" 
+    system "cargo", "build", "--release", "--bin", "dotfiles"
+    bin.install "target/release/dotfiles"
   end
 
   test do
