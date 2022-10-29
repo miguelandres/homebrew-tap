@@ -9,7 +9,7 @@ class DezoomifyRs < Formula
   depends_on "openssl"=>:build
 
   def install
-    system "rustup-init", "-y", "--default-toolchain nightly"
+    system "rustup-init", "-y", "--default-toolchain", "nightly"
     system "cargo", "install", *std_cargo_args
   end
 
