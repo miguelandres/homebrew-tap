@@ -7,10 +7,9 @@ class DotfilesRs < Formula
   license "MIT"
 
   depends_on "openssl"=>:build
-  depends_on "rustup-init" => :build
+  depends_on "rust" => :build
 
   def install
-    system "rustup-init", "-y", "--default-toolchain", "nightly"
     system "cargo", "install", *std_cargo_args
   end
 

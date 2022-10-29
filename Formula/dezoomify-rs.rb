@@ -6,10 +6,9 @@ class DezoomifyRs < Formula
   license "GPL-3.0-only"
 
   depends_on "openssl"=>:build
-  depends_on "rustup-init" => :build
+  depends_on "rust" => :build
 
   def install
-    system "rustup-init", "-y", "--default-toolchain", "nightly"
     system "cargo", "install", *std_cargo_args
   end
 
