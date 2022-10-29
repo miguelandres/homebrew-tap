@@ -10,7 +10,7 @@ class DotfilesRs < Formula
   depends_on "rust" => :build
 
   def install
-    system "cargo", "install", *std_cargo_args
+    system "cargo", "install", "--bin", "dotfiles" *std_cargo_args
   end
 
   test do
