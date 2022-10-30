@@ -1,12 +1,16 @@
 class DotfilesRs < Formula
   desc "Dotfiles management framework"
   homepage "https://github.com/miguelandres/dotfiles"
-  url "https://github.com/miguelandres/dotfiles-rs/releases/download/nightly-2022-10-27/dotfiles-nightly-2022_10_27-macos-universal.tar.gz"
-  sha256 "76ecf96f93ab8c3d527365b6face205d3fa77650678d1dd75286d4eb1e67b0b1"
+  url "https://github.com/miguelandres/dotfiles-rs/archive/refs/tags/nightly-2022-10-27.tar.gz"
+  version "0.9.0"
+  sha256 "5859a8ee49a5fd931b80b0930ad996604d3ec1fb9e9ba62693d69580f15cb227"
   license "MIT"
 
+  depends_on "openssl"=>:build
+  depends_on "rust" => :build
+
   def install
-    bin.install "dotfiles"
+    system "cargo", "install", "--bin", "dotfiles" *std_cargo_args
   end
 
   test do

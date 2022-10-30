@@ -27,6 +27,9 @@ jobs:
         if: steps.cache.outputs.cache-hit != 'true'
         run: brew install-bundler-gems
 
+      - name: Install openssl
+        run: brew install openssl
+
       - run: brew test-bot --only-cleanup-before
 
       - run: brew test-bot --only-setup
@@ -41,4 +44,4 @@ jobs:
         uses: actions/upload-artifact@main
         with:
           name: bottles
-          path: '*.bottle.*'
+          path: "*.bottle.*"
