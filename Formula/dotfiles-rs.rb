@@ -17,7 +17,7 @@ class DotfilesRs < Formula
       bin.install "dotfiles-armv7" => "dotfiles"
     end
   end
-  
+
   test do
     system "which", "dotfiles"
   end
