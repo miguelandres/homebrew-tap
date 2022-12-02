@@ -16,6 +16,9 @@ class DotfilesRs < Formula
     else
       bin.install "dotfiles-armv7" => "dotfiles"
     end
+
+    file = bin/"dotfiles"
+    system "chmod", "+x", file.to_s
   end
 
   test do
