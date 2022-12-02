@@ -6,18 +6,18 @@ class DotfilesRs < Formula
   sha256 "bfcdb81d2f0471fef5921fb443c09cbaed34e6d87fda6e90fb2e5de4146616ce"
   license "MIT"
 
-
   def install
-    if OS.mac? 
+    if OS.mac?
       bin.install "dotfiles-macos" => "dotfiles"
-    elsif Hardware::CPU.intel? 
+    elsif Hardware::CPU.intel?
       bin.install "dotfiles-x86_64" => "dotfiles"
-    elsif Hardware::CPU.is_64_bit? 
+    elsif Hardware::CPU.is_64_bit?
       bin.install "dotfiles-aarch64" => "dotfiles"
-    else 
+    else
       bin.install "dotfiles-armv7" => "dotfiles"
     end
   end
+  
   test do
     system "which", "dotfiles"
   end
