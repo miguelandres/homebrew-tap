@@ -1,7 +1,7 @@
-#!/bin/bash
+#!/bin/zsh
 
-os=${1=macos-universal}
-repo=${2="miguelandres/dotfiles"}
+os=${1="all_binaries"}
+repo=${2="miguelandres/dotfiles-rs"}
 
 URL=$(curl -s https://api.github.com/repos/$repo/releases/latest \
 | grep "browser_download_url.*$os" \
