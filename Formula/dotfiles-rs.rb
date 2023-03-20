@@ -1,9 +1,9 @@
 class DotfilesRs < Formula
   desc "Dotfiles management framework"
   homepage "https://github.com/miguelandres/dotfiles"
-  url "https://github.com/miguelandres/dotfiles-rs/releases/download/nightly-2023-02-19/dotfiles-nightly-2023_02_19-all_binaries.tar.gz"
+  url "https://github.com/miguelandres/dotfiles-rs/releases/download/nightly-2023-03-20/dotfiles-nightly-2023_03_20-all_binaries.tar.gz"
   version "0.10.1"
-  sha256 "f4e5372b6dbc37ab57507f3d0a5601165c12c4ce57b654580fdfc7243be1f63d"
+  sha256 "2c07bed5443aa63a48346d81d28d722f8288aeb1ff1347e364444f1e2102a630"
   license "MIT"
 
   def install
