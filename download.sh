@@ -5,10 +5,10 @@ repo=${2="miguelandres/dotfiles-rs"}
 
 # shellcheck disable=SC2312
 URL=$(curl -s "https://api.github.com/repos/${repo}/releases/latest" |
-	grep "browser_download_url.*${os}" |
-	cut -d : -f 2,3 |
-	tr -d \" |
-	cut -c 2-)
+  grep "browser_download_url.*${os}" |
+  cut -d : -f 2,3 |
+  tr -d \" |
+  cut -c 2-)
 
 echo "downloading ${URL}"
 curl "${URL}" -L -o df.tar.gz
